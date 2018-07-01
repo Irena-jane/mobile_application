@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+  <link href='http://fonts.googleapis.com/css?family=Indie+Flower&text="My Diary Entries"' rel='stylesheet' type='text/css'>
+  <title>Assignment 3</title>
+</head>
+<body>
+  <header>
+      <h1>My Diary Entries</h1>
+  </header>
+  <div class="content">  
+    <div class="add">
+        <a id="btn_add" class="btn_add icon-heart-empty" href="#0">Add an entry? Click here!</a>
+        <div class="entry_add" id="entry_add">
+                <label for="subj">Subject</label>
+                <span class="warning">Enter a subject, please.</span>
+                <div class="in"><input id="subj"></div>
+                <label for="message">Message</label>
+                <span class="warning">Enter a message, please.</span>
+                <div class="in"><textarea id="message"></textarea></div>
+                <div class="in btn-in">
+                  <a id="send" href="#0" class="btn icon-paper-plane-empty"><span>Submit</span></a>
+                  <a id="cancel" href="#0" class="btn icon-cancel"><span>Cancel</span></a>
+                </div>
+                
+        </div>
+    </div>
+    <section class='entries'>
+      <!-- <article>
+        <h2>Wrote my first mobile application <a class="icon-pencil"></a><a  class="icon-cancel"></a></h2>
+        
+        <p>
+          Today I wrote my first mobile application. It was great! I had huge am
+ounts of fun, it was
+          a lot easier than I expected, and I was so happy I spent the rest of t
+he day celebrating.
+        <span class="info">
+          <span class="date">23.07.2014</span>
+          <span class="geo icon-location">London</span>
+        </span>
+        </p>
+
+      </article>
+      <article>
+        <h2>Wrote another mobile application</h2>
+        <p>
+          I am on such a roll with these mobile Web applications that I went crazy and wrote a second one. I am so happy I cannot stop singing at the top of my lungs. My cat seems worried that I've finally lost it completely, but I don't care — it's mobile Web all the way from now on!
+        </p>
+      </article>
+      <article>
+        <h2>Must stop writing mobile applications</h2>
+        <p >
+          My fingers are sore from writing so many great mobile Web applications
+. I know that I should
+          stop and take a break, but there are so many great things to do with t
+his technology that I
+          really don't know how to stop!
+        </p>
+      </article> -->
+    </section>
+  </div>
+  <footer>
+    <span class="icon-heart-empty"></span>This is one of the very sexy apps created during our course thanks to <a href="http://www.w3devcampus.com/">w3c & Niall Roche</a><span class="icon-heart-empty"></span>
+  </footer>
+    <script>
+      // It is Javascript variant of the code below:
+        
+    	// var h2s = document.querySelectorAll('.entries article h2');
+    	// for(var i=0,len=h2s.length;i<len;i++){
+    	// 		h2s[i].onclick = function(){
+    	// 			var parent = this.parentNode;
+    	// 			parent.classList.toggle('pHidden');
+    	// 		};
+    	// }
+    	 
+    </script>
+     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'></script>
+     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+     <script src="js/app.js"></script>
+     <script>
+
+        // $('article h2+p').css('height', '0');
+        // $('article h2').click(toggleItem);
+
+        // function toggleItem(){
+        //   $(this).parent().toggleClass('active');
+        //   $(this).parent().hasClass('active')?animate($(this).next('p'), "flipInX", 'auto'):animate($(this).next('p'), "flipOutX", '0');
+
+        //   function animate (elem, x, y){
+        //     if(y=="auto") elem.css("height", y);
+         
+        //      elem.removeClass().addClass(x+" animated").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){elem.removeClass().css("height", y);
+        //     });
+        //   };
+        // }
+
+        $("#btn_add").click(showAddEntry);
+        $('#send').click(send);
+        $('#cancel').click(cancelEdit);
+     </script>
+  </body>
+</html>
